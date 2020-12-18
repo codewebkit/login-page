@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{font-family: 'Montserrat', sans-serif;}
+.site-heading{
+    margin: 30px 0 150px 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: #3F3D56;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 300px;
+    grid-template-areas: 'image form';
+    
+}
+.site-image{
+    grid-area: image;
+}
+.container .site-sign-in-form{
+    grid-area: form;
+    width: 75%;
+    margin-top: 60px;
+}
+.container .site-sign-in-form h3{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 0 20px 0;
+    color: #3F3D56;
+    letter-spacing: 2.5px;
+}
+.container .site-sign-in-form input{
+    display: block;
+    margin: 20px auto;
+    width: 59%;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #6C63FF;
+    font-size: 20px;
+    padding: 10px 15px 10px 15px;
+}
+.container .site-sign-in-form input:last-of-type{
+    margin-top: 50px;
+    cursor: pointer;
+    border-radius: 50px;
+    background: #FFF;
+    color: #6C63FF;
+    transition: all 0.7s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.container .site-sign-in-form input:last-of-type:hover{
+    color: #FFF;
+    background: #6C63FF;
+}
+.container .site-sign-in-form small{
+    float: right;
+    margin-top: 10px;
+    width: 57%;
+}
+.container .site-sign-in-form small a{
+    text-decoration: none;
+    color: #6C63FF;
+    font-weight: bold;
+}
+.clear{clear: both;}
+
+/* Responsive */
+@media screen and (max-width: 1440px){
+    .site-image img{
+        max-width: 130%;
+    }
+    .container{
+        grid-gap: 200px;
+        margin-top: 170px;
+    }
+    .container .site-sign-in-form{
+        width: 80%;
+    }
+    .container .site-sign-in-form small{
+        width: 53%;
+    }
+}
+@media screen and (max-width: 1280px){
+    .container{
+        margin-top: 0;
+    }
+    .site-heading{
+        margin-bottom: 100px;
+    }
+    .container .site-sign-in-form small {
+        width: 58%;
+    }
+}
+@media screen and (max-width: 1366px){
+    .container .site-sign-in-form small {
+        width: 55%;
+    }
+}
+@media screen and (max-width: 320px) , (max-width: 375px) , (max-width: 425px) ,  (max-width: 616px){
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .site-image{
+        display: none;
+    }
+    .site-heading{
+        margin: 30px 0;
+    }
+    .container .site-sign-in-form{
+        width: 100%;
+    }
+    .container .site-sign-in-form input:last-of-type{
+        margin-top: 20px;
+    }
+    .container .site-sign-in-form small{
+        width: 71%;
+    }
+}
+@media screen and (max-width: 768px) ,(max-width: 1024px){
+    .container{
+        grid-gap: 100px;
+    }
+    .site-heading{
+        margin-bottom: 60px;
+    }
+    .container .site-sign-in-form{
+        margin-top: 20px;
+        width: 100%;
+    }
+    .container .site-sign-in-form input:last-of-type{
+        margin-top: 20px;
+    }
+    .container .site-sign-in-form small{
+        width: 69%;
+    }
+    .container .site-sign-in-form input{
+        font-size: 15px;
+    }
+}
